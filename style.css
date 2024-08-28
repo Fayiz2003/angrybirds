@@ -1,0 +1,544 @@
+*{
+    margin: 0px;
+    pad: 0px;
+    box-sizing: border-box;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-color: #ff0000;
+}
+.centered-text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.button-container {
+    display: flex;
+    background-color:rgba(219, 35, 35, 0);
+    width: 1200px;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgb(255, 0, 0) 0px 5px 15px,
+        rgb(45, 39, 39) 5px 10px 15px;
+    transition: all 0.5s;
+}
+@media (max-width: 400px) {
+    .button-container {
+        width: 300px;
+    }
+    .button-container:hover {
+        width: 320px;
+    }
+    .banner{
+        height: 100px;
+        margin-left: 22px;
+    }
+    #text1{
+    display: none;
+    }
+    #yellow{
+        display: none;
+    }
+    .col1{
+        padding-left: 15px;
+    }
+    .fdiv{
+        display: none;
+    }
+   .div2{
+    margin-top: 80px;
+        margin-left: 22px;
+
+   }
+   .cc{
+    margin-left: 22px;
+   }
+   .footer{
+    margin-left: 30px;
+   }
+ }
+ @media (max-width: 600px) {
+    .button-container {
+        width: 350px;
+    }
+}
+@media (min-width: 1220px) {
+    .button-container:hover {
+        width: 1300px;
+        transition: all 0.5s;
+        box-shadow: rgb(255, 0, 0) 0px 5px 15px;
+    }
+}
+
+
+.button {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff0000;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    &:hover{
+        color: #ff0000;
+
+    }
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.icon {
+    font-size: 20px;
+}
+.first{
+    position: relative;
+}
+.fdiv {
+    height: 550px;
+    width: 100%;
+    background-image: url("./img/bg.png");
+    background-repeat: no-repeat;
+    background-size:  100%; /* Adjusts the width to 100% */
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#red{
+    position: absolute;
+    top: 72%;
+    left:5% ;
+    width: 380px; 
+    filter: drop-shadow(2px 2px 20px rgb(255, 0, 0));
+}
+#yellow{
+    position: absolute;
+    top: 73%;
+    left:73% ;
+    width: 150px; 
+        filter: drop-shadow(2px 2px 20px rgb(255, 242, 0));
+
+}
+#text1{
+    position: absolute;
+    font-size: 150px;
+    font-family: "Shadows Into Light", cursive;
+    color: #00000071;
+  top:80% ;
+  left:35%;
+    filter: drop-shadow(2px 2px 20px gold);
+}
+.div2{
+    background-color: #eaab00;
+    color: #ffd665;
+}
+.row2{
+display: flex;
+flex-wrap: wrap;
+}
+#text2{
+    color: #f1683a;
+    padding-top: 10px;
+    font-family: "Shadows Into Light", cursive;
+    font-weight: bold;
+    font-size: 50px;
+}
+.col1 {
+    position: relative;
+    overflow: hidden; /* Ensure content stays within the bounds */
+}
+
+.g {
+    border-radius: 5%;
+    transition: opacity 0.3s ease;
+}
+
+.col1:hover .g {
+    opacity: 0.2;
+}
+
+.text3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(2px 2px 30px rgb(255, 255, 255));
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.col1:hover .text3 {
+    opacity: 1; /* Show text on hover */
+}
+
+  /* new carousal */
+.carousel{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.6s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+/*button  */
+/* From Uiverse.io by adamgiebl */ 
+/* From Uiverse.io by adamgiebl */ 
+.but {
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.4em 2.4em;
+    font-size: 18px;
+    background-color: #000000;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(76, 255, 157);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+    margin-left: 100px;
+  }
+  
+  .but span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border-radius: 5px;
+  }
+  
+  .but span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.8s;
+  }
+  
+  .but:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: rgb(76, 255, 157);
+    border-radius: 5px;
+
+  }
+  
+  .but:hover {
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  
+  .but:active span::before {
+    background: rgb(76, 255, 157);
+  }
+  /*  */
+  .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the container takes full width */
+    height: 100%; /* Adjust this if you want the container to take full height */
+}
+
+.more .but {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure text/icon inside the button is centered */
+}
